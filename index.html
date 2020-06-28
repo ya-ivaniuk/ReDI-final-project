@@ -33,7 +33,7 @@
     <title>Welcome to Bookiply</title>
   </head>
   <body>
-    <div class="hero">
+    <div class="hero" id="hero">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"
           ><img src="bookiply_logo_RGB_whiteBG_horizontal_240px.png" alt=""
@@ -58,13 +58,13 @@
                 <div class="sr-only">(current)</div></a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="#">Features</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="#">Pricing</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -74,35 +74,44 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Dropdown link
+                Where to find us
               </a>
               <div
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Munich</a>
+                <a class="dropdown-item" href="#">Hamburg</a>
+                <a class="dropdown-item" href="#">Friedrichshafen</a>
+                <a class="dropdown-item" href="#">Mallorca</a>
+                <a class="dropdown-item" href="#">Tenerife</a>
+                <a class="dropdown-item" href="#">Bolzano</a>
+                <a class="dropdown-item" href="#">Faro</a>
               </div>
             </li>
           </ul>
         </div>
       </nav>
       <container class="form-container">
-        <form class="regForm" id="regForm" action="/action_page.php">
+        <form
+          class="regForm"
+          id="regForm"
+          action="https://formspree.io/mjvaeoez"
+          method="POST"
+        >
           <h1>More and easier bookings for your vacation rental!</h1>
           <!-- One "tab" for each step in the form: -->
           <div class="tab">
             <p>
               <input
-                placeholder="Your name"
+                placeholder="Your first name"
                 oninput="this.className = ''"
                 name="fname"
               />
             </p>
             <p>
               <input
-                placeholder="Your email"
+                placeholder="Your last name"
                 oninput="this.className = ''"
                 name="lname"
               />
@@ -112,26 +121,26 @@
             Contact Info:
             <p>
               <input
-                placeholder="E-mail..."
+                placeholder="Email"
                 oninput="this.className = ''"
                 name="email"
               />
             </p>
             <p>
               <input
-                placeholder="Phone..."
+                placeholder="Phone"
                 oninput="this.className = ''"
                 name="phone"
               />
             </p>
           </div>
           <div class="tab">
-            Birthday:
+            Your birthday:
             <p>
               <input placeholder="dd" oninput="this.className = ''" name="dd" />
             </p>
             <p>
-              <input placeholder="mm" oninput="this.className = ''" name="nn" />
+              <input placeholder="mm" oninput="this.className = ''" name="mm" />
             </p>
             <p>
               <input
@@ -141,24 +150,7 @@
               />
             </p>
           </div>
-          <!-- <div class="tab">
-            Login Info:
-            <p>
-              <input
-                placeholder="Username..."
-                oninput="this.className = ''"
-                name="uname"
-              />
-            </p>
-            <p>
-              <input
-                placeholder="Password..."
-                oninput="this.className = ''"
-                name="pword"
-                type="password"
-              />
-            </p>
-          </div> -->
+
           <div style="overflow: auto;">
             <div style="float: right;">
               <button type="button" id="prevBtn" onclick="nextPrev(-1)">
@@ -169,7 +161,7 @@
               </button>
             </div>
           </div>
-          <!-- Circles which indicates the steps of the form: -->
+          <!-- Circles which indicate the steps of the form: -->
           <div style="text-align: center; margin-top: 40px;">
             <div class="step"></div>
             <div class="step"></div>
@@ -340,8 +332,7 @@
             <div class="step-text">
               <h4>Meet your expert</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor >
+                A local Bookiply expert will guide your through the tool during a free demo session >
               </p>
             </div>
           </div>
@@ -350,8 +341,7 @@
             <div class="step-text">
               <h4>Configure your property</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor >
+                We will help you set up competitive pricing and list all of your property's amenities >
               </p>
             </div>
           </div>
@@ -360,8 +350,7 @@
             <div class="step-text">
               <h4>Professional makeover</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor >
+                Enjoy a free professional photoshoot of your holida home and description texts in 5 languages >
               </p>
             </div>
           </div>
@@ -370,8 +359,7 @@
             <div class="step-text">
               <h4>Select distribution channels</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor >
+                Through Bookiply, your property can be published on up to 7 channels: Airbnb, Booking.com, HomeAway, Holidu, Bookiply, Google and your own website >
               </p>
             </div>
           </div>
@@ -380,8 +368,7 @@
             <div class="step-text">
               <h4>Collect payments and get reviews!</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor >
+                Manage payouts and store invoices in one single secure place.  >
               </p>
             </div>
           </div>
@@ -420,10 +407,10 @@
       <div class="testimonial-text">
         <p>
           In the first 6 weeks after opening of our listing, we had bookings for
-          almost 60 days. We would’ve never imagined this in the slightest.
+          almost 60 days. We could not have imagined this in the slightest.
         </p>
         <p><span class="bold">Bernard Jug</span> | Bodensee, Germany</p>
-        <a href="default.asp" target="_blank">Explore Host</a>
+        <a href="#" target="_blank">Explore Host</a>
       </div>
     </section>
     <footer class="footer">
@@ -438,24 +425,62 @@
           </ul>
           <ul class="footer-item">
             <li><h5>Legal</h5></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Rentals</a></li>
-            <li><a href="#">Carrers</a></li>
+            <li><a href="#">Imprint</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">GTC</a></li>
           </ul>
           <ul class="footer-item">
             <li><h5>Products</h5></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Rentals</a></li>
-            <li><a href="#">Carrers</a></li>
+            <li><a href="#">Distribution</a></li>
+            <li><a href="#">Invoice management</a></li>
+            <li><a href="#">Pricing tool</a></li>
+            <li><a href="#">Photos & description</a></li>
           </ul>
         </div>
         <div class="footer-links-container">
           <ul class="footer-item">
-            <li><h5>Newsletter</h5></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><h5>Newsletter subscription</h5></li>
+            <li>
+              
+                
+              </form>
+            </li>
+            <li>
+              <input
+                type="text"
+                placeholder="Enter Email"
+                name="email"
+                required
+              />
+              
+            </li>
+            <li>
+              <div class="wrapper">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/bookiply"
+                      target="_blank"
+                      class="fab fa-facebook-square"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/bookiply/"
+                      target="_blank"
+                      class="fab fa-instagram"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://linkedin.com/company/bookiply"
+                      target="_blank"
+                      class="fab fa-linkedin"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -464,6 +489,7 @@
           <ul class="footer-item">
             <li><p>Copyright 2020 Bookiply</p></li>
           </ul>
+          <a href="#hero" class="fas fa-arrow-circle-up fa-3x"></a>
         </div>
       </div>
     </footer>
