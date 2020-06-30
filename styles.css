@@ -88,6 +88,14 @@ input {
   font-family: Sofia Pro Regular;
 }
 
+.regForm p {
+  font-family: Sofia Pro Regular;
+}
+
+#nextBtn, #prevBtn {
+  font-family: Sofia Pro Regular;
+}
+
 h1 {
   
   font-family: Sofia Pro Bold;
